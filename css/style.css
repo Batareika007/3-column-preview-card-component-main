@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
   line-height: 1.5rem;
 }
 
@@ -14,6 +14,8 @@ h6 {
   font-size: 3rem;
   line-height: 3rem;
   font-weight: 500;
+  font-family: 'Big Shoulders Display', cursive;
+  color: #f2f2f2;
 }
 
 @media screen and (max-width: 425px) {
@@ -94,27 +96,76 @@ span {
 
 /* container max width -------------------  */
 .container {
+  display: block;
   width: 100%;
   margin: 0 auto;
-  padding: 0 1.5rem;
-  max-width: 1160px;
+  max-width: auto;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.header {
-  margin: 0 auto;
-  background-color: blue;
+.card {
+  padding: 48px;
+  color: rgba(255, 255, 255, 0.75);
 }
 
-/* main -------------------  */
-.main {
-  margin: 0 auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+.card-ilustrate {
+  margin-bottom: 42px;
 }
 
-/* footer -------------------  */
-.footer {
-  margin: 0 auto;
-  background-color: red;
+.sedans {
+  background-color: #e38826;
+}
+
+.sedans .card__link {
+  color: #e38826;
+  background-color: white;
+}
+
+.suvs {
+  background-color: #006970;
+}
+
+.suvs .card__link {
+  color: #006970;
+  background-color: white;
+}
+
+.luxury {
+  background-color: #004241;
+}
+
+.luxury .card__link {
+  color: #004241;
+  background-color: white;
+}
+
+.card__header {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  max-width: 200px;
+  margin-bottom: 86px;
+}
+
+.card__link {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0 30px;
+  line-height: 3rem;
+  text-transform: capitalize;
+}
+
+.card__link:hover {
+  background-color: transparent;
+  color: white;
+  outline: 2px solid white;
 }
