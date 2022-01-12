@@ -108,7 +108,7 @@ body {
           flex-direction: row;
 }
 
-@media screen and (max-width: 746px) {
+@media screen and (max-width: 768px) {
   .cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
