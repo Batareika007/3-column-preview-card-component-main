@@ -17,11 +17,6 @@ h6 {
     font-weight: 500;
     font-family: 'Big Shoulders Display', cursive;
     color: $heading-colror;
-
-    @media screen and (max-width: 425px) {
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
 }
 
 .grid {
@@ -75,15 +70,26 @@ span {
 }
 
 /* container max width -------------------  */
+body {
+    height: auto;
+}
 
 .container {
-    display: block;
     width: 100%;
-    margin: 0 auto;
-    max-width: auto;
-    padding: 0 20px;
+    margin: 150px auto 0;
+    max-width: fit-content;
+    padding: 0 24px;
+}
+
+.cards {
+    border-radius: 8px;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
+
+    @media screen and (max-width:746px) {
+        flex-direction: column;
+    }
 }
 
 .card {
@@ -125,11 +131,19 @@ span {
 .card__header {
     margin-bottom: 40px;
     text-transform: uppercase;
+
+    @media screen and (max-width:425px) {
+        margin-bottom: 28px;
+    }
 }
 
 .card__text {
     max-width: 200px;
     margin-bottom: 86px;
+
+    @media screen and (max-width:425px) {
+        margin-bottom: 28px;
+    }
 }
 
 .card__link {

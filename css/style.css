@@ -18,18 +18,6 @@ h6 {
   color: #f2f2f2;
 }
 
-@media screen and (max-width: 425px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
 .grid {
   display: -ms-grid;
   display: grid;
@@ -95,12 +83,22 @@ span {
 }
 
 /* container max width -------------------  */
+body {
+  height: auto;
+}
+
 .container {
-  display: block;
   width: 100%;
-  margin: 0 auto;
-  max-width: auto;
-  padding: 0 20px;
+  margin: 150px auto 0;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 0 24px;
+}
+
+.cards {
+  border-radius: 8px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,6 +106,15 @@ span {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+@media screen and (max-width: 746px) {
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .card {
@@ -151,9 +158,21 @@ span {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 425px) {
+  .card__header {
+    margin-bottom: 28px;
+  }
+}
+
 .card__text {
   max-width: 200px;
   margin-bottom: 86px;
+}
+
+@media screen and (max-width: 425px) {
+  .card__text {
+    margin-bottom: 28px;
+  }
 }
 
 .card__link {
